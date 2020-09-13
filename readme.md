@@ -1,3 +1,7 @@
+# imagemin-gifsicle-mirror
+
+use `gifsicle-mirror` as dependencies
+
 # imagemin-gifsicle [![Build Status](https://travis-ci.org/imagemin/imagemin-gifsicle.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-gifsicle)
 
 > Imagemin plugin for [Gifsicle](https://www.lcdf.org/gifsicle/)
@@ -5,24 +9,22 @@
 ## Install
 
 ```
-$ npm install imagemin-gifsicle
+$ npm install imagemin-gifsicle-mirror
 ```
 
 ## Usage
 
 ```js
 const imagemin = require('imagemin');
-const imageminGifsicle = require('imagemin-gifsicle');
+const imageminGifsicle = require('imagemin-gifsicle-mirror');
 
 (async () => {
-	await imagemin(['images/*.gif'], {
-		destination: 'build/images',
-		plugins: [
-			imageminGifsicle()
-		]
-	});
+  await imagemin(['images/*.gif'], {
+    destination: 'build/images',
+    plugins: [imageminGifsicle()]
+  });
 
-	console.log('Images optimized');
+  console.log('Images optimized');
 })();
 ```
 
